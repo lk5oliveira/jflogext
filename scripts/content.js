@@ -239,7 +239,7 @@ function createAgentsTable(activeAgents) {
 function createCountDiv(activeAgents) {
     // Create the agents and tickets count
     const countDiv = document.createElement("div");
-    countDiv.textContent = `Total Assigned: ${activeAgents.length} | Total Unassigned: ${activeAgents.unassignedTicketCount}`;
+    countDiv.textContent = `Total Assigned: ${activeAgents.length}    |    Total Unassigned: ${activeAgents.unassignedTicketCount}`;
     countDiv.style.marginTop = '20px';
     countDiv.style.fontWeight = 'bold';
     countDiv.style.fontSize = '14px';
