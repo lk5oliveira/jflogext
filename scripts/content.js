@@ -7,7 +7,7 @@ I'M OPEN TO SUGGESTIONS
 MADE BY LUCAS OLIVEIRA 
 ********************************
 */
-
+console.log('new version');
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -54,7 +54,6 @@ async function processRows() {
                 return;
             }
 
-            
             // Find the agent in the agents array
             let agentObject = agents.find(agent => agent.agent === agentIdentifier);
 
@@ -88,9 +87,12 @@ async function processRows() {
         }
     });
 
+    // Adicionar unassignedTicketCount ao objeto activeAgents
+    activeAgents.unassignedTicketCount = unassignedTicketCount;
+
     // Sort in descending order based on minutesPassed
     activeAgents.sort((a, b) => b.minutesPassed - a.minutesPassed);
-    console.log(unassignedTicketCount);
+
     createAndInsertElements(activeAgents);
 }
 
@@ -237,7 +239,7 @@ function createAgentsTable(activeAgents) {
 function createCountDiv(activeAgents) {
     // Create the agents and tickets count
     const countDiv = document.createElement("div");
-    countDiv.textContent = `Total Agents: ${activeAgents.length}`;
+    countDiv.textContent = `Total Assigned: ${activeAgents.length} | Total Unassigned: ${activeAgents.unassignedTicketCount}`;
     countDiv.style.marginTop = '20px';
     countDiv.style.fontWeight = 'bold';
     countDiv.style.fontSize = '14px';
