@@ -7,7 +7,7 @@ I'M OPEN TO SUGGESTIONS
 MADE BY LUCAS OLIVEIRA 
 ********************************
 */
-console.log('new version');
+console.log('new version');`"~±`
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
