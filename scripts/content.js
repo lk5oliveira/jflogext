@@ -7,7 +7,7 @@ I'M OPEN TO SUGGESTIONS
 MADE BY LUCAS OLIVEIRA 
 ********************************
 */
-console.log('new version');`"~±`
+console.log('new version 2');
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -239,7 +239,7 @@ function createAgentsTable(activeAgents) {
 function createCountDiv(activeAgents) {
     // Create the agents and tickets count
     const countDiv = document.createElement("div");
-    countDiv.textContent = `Total Assigned: ${activeAgents.length}    |    Total Unassigned: ${activeAgents.unassignedTicketCount}`;
+    countDiv.textContent = `Total Assigned: ${activeAgents.length}\u00A0\u00A0\u00A0\u00A0|\u00A0\u00A0\u00A0\u00A0Total Unassigned: ${activeAgents.unassignedTicketCount}`;
     countDiv.style.marginTop = '20px';
     countDiv.style.fontWeight = 'bold';
     countDiv.style.fontSize = '14px';
